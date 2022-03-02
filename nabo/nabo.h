@@ -446,7 +446,10 @@ namespace Nabo
 	typedef NearestNeighbourSearch<float> NNSearchF;
 	//! nearest neighbour search with scalars of type double
 	typedef NearestNeighbourSearch<double> NNSearchD;
-	
+
+	#define NABO_SUPPORT_EIGEN_MAP
+	typedef NearestNeighbourSearch<float, Eigen::Map<Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic>>> NNMapSearchF;
+	typedef NearestNeighbourSearch<double, Eigen::Map<Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>>> NNMapSearchD;
 	//@}
 }
 
